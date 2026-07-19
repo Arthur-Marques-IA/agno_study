@@ -49,10 +49,36 @@ Para conversar com o agente diretamente no terminal, execute:
 python playground.py
 ```
 
-### Servidor Web (Agent UI)
+O projeto é dividido em duas partes: o motor do agente (backend) e a interface gráfica (frontend UI). A maneira mais fácil de rodar ambos é usando Docker.
 
-Para rodar o agente através de uma interface gráfica web (Agent UI), inicie o servidor:
+**Rodando Tudo com Docker (Recomendado)**
+
+1. Certifique-se de ter configurado o seu `.env` com a sua chave.
+2. No terminal (na raiz do projeto), execute:
+   ```bash
+   docker-compose up --build
+   ```
+Esse comando subirá automaticamente os dois serviços:
+- **Backend (API)** rodando internamente na porta `7777`.
+- **Frontend (Interface)** rodando na porta `3000`.
+
+3. Abra no seu navegador: **[http://localhost:3000](http://localhost:3000)** para acessar o chat!
+
+---
+
+**Rodando Tudo Nativamente (Alternativa)**
+
+Se você não quiser usar Docker, siga os passos abaixo em dois terminais separados:
+
+**Terminal 1 - Backend:**
 ```bash
 python serve.py
 ```
-O servidor estará rodando em `http://localhost:7777`.
+
+**Terminal 2 - Frontend:**
+```bash
+cd agent-ui
+npm install
+npm run dev
+```
+Acesse **[http://localhost:3000](http://localhost:3000)** no navegador.

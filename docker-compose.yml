@@ -6,6 +6,14 @@ services:
       - "7777:7777"
     env_file:
       - .env
+
+  ui:
+    build: ./agent-ui
+    container_name: agno-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - agent
     # Se quiser rodar a CLI ao invés do servidor web via docker, comente a linha ports e modifique o command:
     # command: python playground.py
     # stdin_open: true
