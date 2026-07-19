@@ -1,0 +1,14 @@
+# Ambientes virtuais
+venv/
+env/
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Outros
+.DS_Store

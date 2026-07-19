@@ -1,0 +1,10 @@
+agno
+google-genai
+duckduckgo-search
+ddgs
+yfinance
+fastapi
+uvicorn
+ag-ui-protocol
+python-multipart
+python-dotenv
