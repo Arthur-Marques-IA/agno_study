@@ -18,4 +18,4 @@ app = agent_os.get_app()
 
 if __name__ == "__main__":
     print("🚀 Iniciando o servidor AgentOS para o Agent UI em http://localhost:7777 ...")
-    agent_os.serve(app="serve:app", reload=True)
+    agent_os.serve(app="serve:app", reload=True, host="0.0.0.0")
